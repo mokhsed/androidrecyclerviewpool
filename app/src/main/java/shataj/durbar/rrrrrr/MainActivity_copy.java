@@ -1,27 +1,19 @@
 package shataj.durbar.rrrrrr;
 
-import androidx.annotation.RequiresApi;
+import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.util.Log;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.ConcatAdapter;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.SharedPreferences;
-import android.os.Build;
-import android.os.Bundle;
-import android.util.Log;
-import android.widget.Toast;
-
-import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
-import com.android.volley.toolbox.JsonRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.gson.Gson;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonObject;
 import com.google.gson.reflect.TypeToken;
 
 import org.json.JSONArray;
@@ -33,14 +25,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
-import retrofit2.http.POST;
-
-public class MainActivity extends AppCompatActivity {
+public class MainActivity_copy extends AppCompatActivity {
 
     RequestQueue requestQueue;
 
@@ -192,7 +177,7 @@ patchdata();
     }
 
     private void setadepter() {
-        linearLayoutManager=new LinearLayoutManager(MainActivity.this);
+        linearLayoutManager=new LinearLayoutManager(MainActivity_copy.this);
         adepter=new adepter_new(loadDatamain());
         adepter.notifyDataSetChanged();
         RecyclerViewmain.setLayoutManager(linearLayoutManager);
